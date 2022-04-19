@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <script type="text/javascript">
+      function Join(){
+        vkBridge.send("VKWebAppShowInviteBox", {})
+         .then(data => console.log(data.success))  
+        .catch(error => console.log(error));
+      }
+    </script>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=1000 height=621></canvas>
       <div id="unity-loading-bar">
